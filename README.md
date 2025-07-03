@@ -21,10 +21,12 @@ TruthLens is a Streamlit-based Fake News Detection App that helps users identify
 - LightGBM Classifier
 
 ### 📦 Dataset
+
 We used a custom dataset `combined.csv` which merges multiple publicly available fake and real news sources.
 
 - ✅ It includes title, text, and label columns.
-- 📁 Stored locally in the project repository for seamless deployment.
+- 🔗 [Download combined.csv from Google Drive](https://drive.google.com/file/d/1sUHu6q3J9WgZBmk2O7AGXIxsF8Gg4u1D/view?usp=sharing)
+
 
 ## 🚀 Run Locally
 
