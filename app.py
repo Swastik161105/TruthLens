@@ -8,7 +8,7 @@ os.makedirs("models", exist_ok=True)
 
 if not os.path.exists("models/combined_model.pkl"):
     gdown.download(
-        "https://drive.google.com/uc?id=1NSEQkymAz7HnSmXUpN5LRrCH3S8R4sE8",
+        "https://drive.google.com/file/d/1NSEQkymAz7HnSmXUpN5LRrCH3S8R4sE8/view?usp=sharing",
         "models/combined_model.pkl",
         quiet=False
     )
