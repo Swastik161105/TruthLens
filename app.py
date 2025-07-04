@@ -5,6 +5,10 @@ import os
 import gdown
 
 
+if not os.path.exists("models/combined_model.pkl"):
+    gdown.download("https://drive.google.com/uc?id=1NSEQkymAz7HnSmXUpN5LRrCH3S8R4sE8", "models/combined_model.pkl", quiet=False)
+
+
 # Load all models and vectorizers
 title_model = joblib.load("models/title_model.pkl")
 full_model = joblib.load("models/combined_model.pkl")
@@ -145,5 +149,5 @@ else:
                 st.caption("This is the final and more reliable prediction.")
             else:
                 st.success(f"REAL NEWS, Confidence: {prob[1]*100:.2f}%")
-                st.caption("Full article confirms the title’s reliability.")
+                st.caption("Full article confirms the reliability of the title.")
 
