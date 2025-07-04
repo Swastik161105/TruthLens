@@ -1,0 +1,12 @@
+streamlit
+scikit-learn
+joblib
+lightgbm
+re
+pandas
+numpy
+matplotlib
+seaborn
+nltk
+
+
