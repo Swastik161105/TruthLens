@@ -8,25 +8,25 @@ os.makedirs("models", exist_ok=True)
 
 if not os.path.exists("models/combined_model.pkl"):
     gdown.download(
-        "https://drive.google.com/file/d/1NSEQkymAz7HnSmXUpN5LRrCH3S8R4sE8/view?usp=sharing",
+        "https://drive.google.com/uc?id=1NSEQkymAz7HnSmXUpN5LRrCH3S8R4sE8",
         "models/combined_model.pkl",
         quiet=False
     )
 if not os.path.exists("models/combined_vectorizer.pkl"):
     gdown.download(
-        "https://drive.google.com/file/d/1ujpoSTvylBme49CrysdeJQpHPqSzryZj/view?usp=sharing",
+        "https://drive.google.com/uc?id=1ujpoSTvylBme49CrysdeJQpHPqSzryZj",
         "models/combined_vectorizer.pkl",
         quiet=False
     )
 if not os.path.exists("models/title_model.pkl"):
     gdown.download(
-        "https://drive.google.com/file/d/15pbD9F02kj7B4Bhnc1CuxNAWMrp5c_OO/view?usp=sharing",
+        "https://drive.google.com/uc?id=15pbD9F02kj7B4Bhnc1CuxNAWMrp5c_OO",
         "models/title_model.pkl",
         quiet=False
     )
 if not os.path.exists("models/title_vectorizer.pkl"):
     gdown.download(
-        "https://drive.google.com/file/d/1vRLxV9TEeqJGjqlyPc_NnKUWdVJtSTiP/view?usp=sharing",
+        "https://drive.google.com/uc?id=1vRLxV9TEeqJGjqlyPc_NnKUWdVJtSTiP",
         "models/title_vectorizer.pkl",
         quiet=False
     )
