@@ -15,19 +15,19 @@ if not os.path.exists("models/combined_model.pkl"):
 if not os.path.exists("models/combined_vectorizer.pkl"):
     gdown.download(
         "https://drive.google.com/file/d/1ujpoSTvylBme49CrysdeJQpHPqSzryZj/view?usp=sharing",
-        "models/combined_model.pkl",
+        "models/combined_vectorizer.pkl",
         quiet=False
     )
 if not os.path.exists("models/title_model.pkl"):
     gdown.download(
         "https://drive.google.com/file/d/15pbD9F02kj7B4Bhnc1CuxNAWMrp5c_OO/view?usp=sharing",
-        "models/combined_model.pkl",
+        "models/title_model.pkl",
         quiet=False
     )
 if not os.path.exists("models/title_vectorizer.pkl"):
     gdown.download(
         "https://drive.google.com/file/d/1vRLxV9TEeqJGjqlyPc_NnKUWdVJtSTiP/view?usp=sharing",
-        "models/combined_model.pkl",
+        "models/title_vectorizer.pkl",
         quiet=False
     )
     
