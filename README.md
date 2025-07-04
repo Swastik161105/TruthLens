@@ -34,3 +34,6 @@ We used a custom dataset `combined.csv` which merges multiple publicly available
 pip install -r requirements.txt
 streamlit run app.py
 
+
+## 🌐 Live Demo
+Check out the app here: [TruthLens App](https://truthlens-fake-news-detector.streamlit.app)
