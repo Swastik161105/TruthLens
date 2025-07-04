@@ -4,35 +4,32 @@ import re
 import os
 import gdown
 
-os.makedirs("models", exist_ok=True)
-os.makedirs("vectorizers", exist_ok=True)
-
-if not os.path.exists("models/combined_model.pkl"):
-    result = gdown.download("https://drive.google.com/uc?id=1NSEQkymAz7HnSmXUpN5LRrCH3S8R4sE8", "models/combined_model.pkl", quiet=False)
+if not os.path.exists("combined_model.pkl"):
+    result = gdown.download("https://drive.google.com/uc?id=1NSEQkymAz7HnSmXUpN5LRrCH3S8R4sE8", "combined_model.pkl", quiet=False)
     if not result:
         st.error("Download failed: combined_model.pkl not found or access denied.")
 
-if not os.path.exists("vectorizers/combined_vectorizer.pkl"):
-    result = gdown.download("https://drive.google.com/uc?id=1ujpoSTvylBme49CrysdeJQpHPqSzryZj", "vectorizers/combined_vectorizer.pkl", quiet=False)
+if not os.path.exists("combined_vectorizer.pkl"):
+    result = gdown.download("https://drive.google.com/uc?id=1ujpoSTvylBme49CrysdeJQpHPqSzryZj", "combined_vectorizer.pkl", quiet=False)
     if not result:
         st.error("Download failed: combined_vectorizer.pkl not found or access denied.")
 
-if not os.path.exists("models/title_model.pkl"):
-    result = gdown.download("https://drive.google.com/uc?id=15pbD9F02kj7B4Bhnc1CuxNAWMrp5c_OO", "models/title_model.pkl", quiet=False)
+if not os.path.exists("title_model.pkl"):
+    result = gdown.download("https://drive.google.com/uc?id=15pbD9F02kj7B4Bhnc1CuxNAWMrp5c_OO", "title_model.pkl", quiet=False)
     if not result:
         st.error("Download failed: title_model.pkl not found or access denied.")
 
-if not os.path.exists("vectorizers/title_vectorizer.pkl"):
-    result = gdown.download("https://drive.google.com/uc?id=1vRLxV9TEeqJGjqlyPc_NnKUWdVJtSTiP", "vectorizers/title_vectorizer.pkl", quiet=False)
+if not os.path.exists("title_vectorizer.pkl"):
+    result = gdown.download("https://drive.google.com/uc?id=1vRLxV9TEeqJGjqlyPc_NnKUWdVJtSTiP", "title_vectorizer.pkl", quiet=False)
     if not result:
         st.error("Download failed: title_vectorizer.pkl not found or access denied.")
 
 
 # Load all models and vectorizers
-title_model = joblib.load("models/title_model.pkl")
-full_model = joblib.load("models/combined_model.pkl")
-title_vectorizer = joblib.load("vectorizers/title_vectorizer.pkl")
-full_vectorizer = joblib.load("vectorizers/combined_vectorizer.pkl")
+title_model = joblib.load("title_model.pkl")
+full_model = joblib.load("combined_model.pkl")
+title_vectorizer = joblib.load("title_vectorizer.pkl")
+full_vectorizer = joblib.load("combined_vectorizer.pkl")
 
 
 
