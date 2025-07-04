@@ -5,14 +5,15 @@ import os
 import gdown
 
 os.makedirs("models", exist_ok=True)
+os.makedirs("vectorizers", exist_ok=True)
 
 if not os.path.exists("models/combined_model.pkl"):
     result = gdown.download("https://drive.google.com/uc?id=1NSEQkymAz7HnSmXUpN5LRrCH3S8R4sE8", "models/combined_model.pkl", quiet=False)
     if not result:
         st.error("Download failed: combined_model.pkl not found or access denied.")
 
-if not os.path.exists("models/combined_vectorizer.pkl"):
-    result = gdown.download("https://drive.google.com/uc?id=1ujpoSTvylBme49CrysdeJQpHPqSzryZj", "models/combined_vectorizer.pkl", quiet=False)
+if not os.path.exists("vectorizers/combined_vectorizer.pkl"):
+    result = gdown.download("https://drive.google.com/uc?id=1ujpoSTvylBme49CrysdeJQpHPqSzryZj", "vectorizers/combined_vectorizer.pkl", quiet=False)
     if not result:
         st.error("Download failed: combined_vectorizer.pkl not found or access denied.")
 
@@ -21,8 +22,8 @@ if not os.path.exists("models/title_model.pkl"):
     if not result:
         st.error("Download failed: title_model.pkl not found or access denied.")
 
-if not os.path.exists("models/title_vectorizer.pkl"):
-    result = gdown.download("https://drive.google.com/uc?id=1vRLxV9TEeqJGjqlyPc_NnKUWdVJtSTiP", "models/title_vectorizer.pkl", quiet=False)
+if not os.path.exists("vectorizers/title_vectorizer.pkl"):
+    result = gdown.download("https://drive.google.com/uc?id=1vRLxV9TEeqJGjqlyPc_NnKUWdVJtSTiP", "vectorizers/title_vectorizer.pkl", quiet=False)
     if not result:
         st.error("Download failed: title_vectorizer.pkl not found or access denied.")
 
