@@ -12,8 +12,25 @@ if not os.path.exists("models/combined_model.pkl"):
         "models/combined_model.pkl",
         quiet=False
     )
-
-
+if not os.path.exists("models/combined_vectorizer.pkl"):
+    gdown.download(
+        "https://drive.google.com/file/d/1ujpoSTvylBme49CrysdeJQpHPqSzryZj/view?usp=sharing",
+        "models/combined_model.pkl",
+        quiet=False
+    )
+if not os.path.exists("models/title_model.pkl"):
+    gdown.download(
+        "https://drive.google.com/file/d/15pbD9F02kj7B4Bhnc1CuxNAWMrp5c_OO/view?usp=sharing",
+        "models/combined_model.pkl",
+        quiet=False
+    )
+if not os.path.exists("models/title_vectorizer.pkl"):
+    gdown.download(
+        "https://drive.google.com/file/d/1vRLxV9TEeqJGjqlyPc_NnKUWdVJtSTiP/view?usp=sharing",
+        "models/combined_model.pkl",
+        quiet=False
+    )
+    
 
 # Load all models and vectorizers
 title_model = joblib.load("models/title_model.pkl")
@@ -156,4 +173,3 @@ else:
             else:
                 st.success(f"REAL NEWS, Confidence: {prob[1]*100:.2f}%")
                 st.caption("Full article confirms the reliability of the title.")
-
